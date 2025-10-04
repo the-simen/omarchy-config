@@ -44,3 +44,8 @@
 !fish/
 !fish/*
 !fish/**
+!starship.toml
+!tmux
+!tmux/*
+!tmux/**
+
