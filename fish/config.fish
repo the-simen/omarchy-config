@@ -1,5 +1,10 @@
 set -gx PATH /usr/bin $PATH
-set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+
+# SSH Agent !!!
+set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+if not ssh-add -l >/dev/null 2>&1
+    ssh-add ~/.ssh/id_ed25519_bs >/dev/null 2>&1
+end
 
 function fish_user_key_bindings
     fish_vi_key_bindings
@@ -17,9 +22,9 @@ end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    if not set -q TMUX
-        tmux attach || tmux new -s main
-    end
+    # if not set -q TMUX
+    #     tmux attach || tmux new -s main
+    # end
 
     fastfetch
     set fish_greeting
