@@ -52,3 +52,11 @@
 !walker/
 !walker/*
 !walker/**
+!swayosd
+!swayosd/
+!swayosd/*
+!swayosd/**
+!mako
+!mako/
+!mako/*
+!mako/**
