@@ -60,3 +60,7 @@
 !mako/
 !mako/*
 !mako/**
+!.scripts
+!.scripts/
+!.scripts/*
+!.scripts/**
