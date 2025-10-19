@@ -44,6 +44,7 @@ alias top='btop'
 alias cat='bat'
 alias ping='gping'
 alias n='nvim'
+alias n.='nvim .'
 alias f='yazi'
 
 
