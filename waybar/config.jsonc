@@ -23,7 +23,7 @@
     "battery"
   ],
   "hyprland/window": {
-    "format": "{class} - {title}"
+    "format": "{class}"
   },
   "hyprland/language": {
     "format": " {short}",
@@ -31,7 +31,7 @@
     "tooltip": true
   },
   "hyprland/activewindow": {
-    "format": "{class} — {title}",
+    "format": "{class}",
     "tooltip-format": "{class} — {title}\nPID: {pid}"
   },
   "hyprland/workspaces": {
@@ -61,6 +61,7 @@
   "custom/omarchy": {
     "format": "<span>\uf303</span>",
     "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "btw"
   },
   "custom/update": {
