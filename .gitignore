@@ -64,3 +64,5 @@
 !.scripts/
 !.scripts/*
 !.scripts/**
+!discord
+!discord/settings.json
