@@ -46,6 +46,8 @@ alias cat='bat'
 alias ping='gping'
 alias n='nvim'
 alias n.='nvim .'
+alias v='nvim'
+alias v.='nvim .'
 alias f='yazi'
 
 
