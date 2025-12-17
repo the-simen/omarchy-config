@@ -1,8 +1,8 @@
 CONFIG="$HOME/.config/hypr/input.conf"
 STATE_FILE="$HOME/.cache/swap_caps_state"
 
-OPT1="kb_options = grp:win_space_toggle"
-OPT2="kb_options = grp:win_space_toggle, ctrl:swapcaps"
+OPT1="kb_options = grp:caps_toggle, caps:none"
+OPT2="kb_options = grp:caps_toggle, caps:none, ctrl:swapcaps"
 
 if [ -f "$STATE_FILE" ]; then
   STATE=$(cat "$STATE_FILE")
