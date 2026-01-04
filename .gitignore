@@ -66,3 +66,7 @@
 !.scripts/**
 !discord
 !discord/settings.json
+!ghostty
+!ghostty/
+!ghostty/*
+!ghostty/**
