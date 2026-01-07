@@ -6,7 +6,8 @@
   "height": 26,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
   "modules-center": [
     "clock",
@@ -16,12 +17,24 @@
   "modules-right": [
     "group/tray-expander",
     "hyprland/language",
-    "bluetooth",
-    "network",
-    "pulseaudio",
+    "group/right-custom",
     "cpu",
-    "battery"
+    "memory",
+    "battery",
+    "custom/system"
   ],
+  "group/right-custom": {
+    "orientation": "inherit",
+    "modules": [
+      "bluetooth",
+      "network",
+      "pulseaudio"
+    ]
+  },
+  "group/right-indicators": {
+    "orientation": "inherit",
+    "modules": []
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -37,7 +50,7 @@
       "8": "8",
       "9": "9",
       "10": "0",
-      "active": "󱓻"
+      "active": "",
     },
     "persistent-workspaces": {
       "1": [],
@@ -47,11 +60,19 @@
       "5": []
     }
   },
+  "hyprland/window": {
+    "format": "{class}"
+  },
   "custom/omarchy": {
-    "format": "<span font='omarchy'>\uf303</span>",
+    "format": "<span font='omarchy'> \uf303 </span>",
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + q"
+  },
+  "custom/system": {
+    "format": "",
+    "on-click": "omarchy-menu system",
+    "tooltip-format": "System Menu\n\nSuper + Escape"
   },
   "custom/update": {
     "format": "",
@@ -62,21 +83,41 @@
     "interval": 21600
   },
   "hyprland/language": {
-    "format": "{short}",
-    "tooltip-format": "Layout: {long}",
-    "on-click": "~/.config/.scripts/toggle-lang.sh",
-    "tooltip": true
+    "format": " {shortDescription}",
+    "tooltip": true,
+    "tooltip-format": "{long}",
+    "on-click": "~/.config/.scripts/toggle-lang.sh"
+  },
+  "memory": {
+    "inerval": 5,
+    "format": " {used}G",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "on-click-right": "alacritty"
   },
   "cpu": {
     "interval": 5,
-    "format": "󰍛",
+    "format": "󰍛 {usage}%",
     "on-click": "omarchy-launch-or-focus-tui btop",
     "on-click-right": "alacritty"
   },
   "clock": {
     "format": "{:L%A %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n\n<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 4,
+      "weeks-pos": "left",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "network": {
@@ -143,7 +184,7 @@
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "󰂱",
-    "format-no-controller": "",
+    "format-no-controller": "󰂲",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth"
   },
@@ -155,6 +196,12 @@
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
       "default": [
         "",
         "",
