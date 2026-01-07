@@ -101,11 +101,6 @@
   margin: 4px 0;
 }
 
-#language:hover {
-  background-color: @mauve;
-  color: @background;
-}
-
 #right-custom,
 #right-indicators {
   background-color: @surface0;

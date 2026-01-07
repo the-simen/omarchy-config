@@ -84,9 +84,8 @@
   },
   "hyprland/language": {
     "format": " {shortDescription}",
-    "tooltip": true,
-    "tooltip-format": "{long}",
-    "on-click": "~/.config/.scripts/toggle-lang.sh"
+    "menu": true,
+    "interval": 1
   },
   "memory": {
     "inerval": 5,
