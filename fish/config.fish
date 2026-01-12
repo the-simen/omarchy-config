@@ -31,6 +31,13 @@ if status is-interactive
     fastfetch
     set fish_greeting
 
+    if set -q TMUX
+        # Используем tmux-окружение как флаг
+        if not tmux show-environment -g TMUX_CONF_LOADED >/dev/null 2>&1
+            tmux source-file ~/.tmux.conf
+            tmux set-environment -g TMUX_CONF_LOADED 1
+        end
+    end
 end
 
 if test -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt
