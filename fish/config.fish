@@ -66,3 +66,4 @@ alias f='yazi'
 #
 
 starship init fish | source
+enable_transience
