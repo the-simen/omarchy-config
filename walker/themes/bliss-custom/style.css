@@ -30,10 +30,15 @@ scrollbar {
 }
 
 .preview-box {
+  background: linear-gradient(90deg, alpha(@border, 0.15), transparent 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 1px solid alpha(@accent, 1);
+  min-height: 400px;
+  max-height: 400px;
 }
 
-.box {
-}
+.box {}
 
 .search-container {
   background: @base;
@@ -44,8 +49,7 @@ scrollbar {
   opacity: 0.5;
 }
 
-.input {
-}
+.input {}
 
 .input:focus,
 .input:active {
@@ -53,27 +57,20 @@ scrollbar {
   outline: none;
 }
 
-.content-container {
-}
+.content-container {}
 
-.placeholder {
-}
+.placeholder {}
 
-.scroll {
-}
+.scroll {}
 
-.list {
-}
+.list {}
 
 child,
-child > * {
-}
+child>* {}
 
-child:hover .item-box {
-}
+child:hover .item-box {}
 
-child:selected .item-box {
-}
+child:selected .item-box {}
 
 child:selected .item-box * {
   color: @selected-text;
@@ -88,8 +85,7 @@ child:selected .item-box * {
   padding: 14px 0;
 }
 
-.item-text {
-}
+.item-text {}
 
 .item-subtext {
   font-size: 0px;
@@ -118,7 +114,8 @@ child:selected .item-box * {
 }
 
 window .box-wrapper {
-  background: rgba(@background, 0.55); /* same as Waybar and terminal */
+  background: rgba(@background, 0.55);
+  /* same as Waybar and terminal */
   padding: 8px 2px;
   color: @text;
   border: 1px solid @border;
@@ -186,6 +183,7 @@ window .list child {
     transform: translateX(-15px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
