@@ -40,8 +40,8 @@
     "format": "{icon}",
     "format-icons": {
       "default": "",
-      "1": "1",
-      "2": "2",
+      "1": "",
+      "2": " ",
       "3": "3",
       "4": "4",
       "5": "5",
@@ -60,7 +60,14 @@
     }
   },
   "hyprland/window": {
-    "format": "{class}"
+    "format": "{class}",
+    "rewrite": {
+      "org.telegram.desktop": "Telegram",
+      "google-chrome": "Chrome",
+      "org.gnome.Calculator": "Calculator",
+      "org.gnome.Nautilus": "Nautilus",
+      "com.mitchellh.ghostty": "Ghostty"
+    }
   },
   "custom/omarchy": {
     "format": "<span font='omarchy'> \uf303 </span>",
