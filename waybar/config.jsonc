@@ -66,7 +66,8 @@
       "google-chrome": "Chrome",
       "org.gnome.Calculator": "Calculator",
       "org.gnome.Nautilus": "Nautilus",
-      "com.mitchellh.ghostty": "Ghostty"
+      "com.mitchellh.ghostty": "Ghostty",
+      "com.github.rafostar.Clapper": "Clapper"
     }
   },
   "custom/omarchy": {
