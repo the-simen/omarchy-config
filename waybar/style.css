@@ -60,7 +60,6 @@
 
 #workspaces button.active {
   background-color: @mauve;
-  padding: 0 12px;
 }
 
 #workspaces button.empty {
