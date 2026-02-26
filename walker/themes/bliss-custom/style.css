@@ -33,7 +33,6 @@ scrollbar {
   background: linear-gradient(90deg, alpha(@border, 0.15), transparent 100%);
   padding: 20px;
   border-radius: 8px;
-  border-left: 1px solid alpha(@accent, 1);
   min-height: 400px;
   max-height: 400px;
 }
