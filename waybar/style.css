@@ -208,16 +208,13 @@ tooltip,
   animation: fade-in 0.15s linear;
 }
 
-#custom-screenrecording-indicator {
-  margin: 0 7px;
-  background: @surface0;
-  padding: 0 8px;
-  border-radius: 5px;
-  margin: 4px 0;
-  font-size: 14px;
-  color: @rosewater;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
+  /* margin: 0 7px; */
+  /* background: @surface0; */
+  /* padding: 0 8px; */
+  /* border-radius: 5px; */
+  /* margin: 4px 0; */
+  /* color: @rosewater; */
+  /* transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out; */
 
 #custom-screenrecording-indicator:hover {
   background-color: @mauve;
@@ -262,5 +259,10 @@ tooltip {
 }
 
 #custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
